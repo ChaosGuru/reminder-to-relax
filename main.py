@@ -8,22 +8,20 @@ def timer():
     if tmr < 0:
         app.destroy()
 
-    label.config(text='Please relax your eyes\n%s' % tmr)
+    label.config(text='RELAX, let your eyes rest\n%s' % tmr)
     label.after(1000, timer)
 
 # window
 app = Tk()
-app.configure(bg='white')
+app.configure(bg='black')
 app.overrideredirect(True)
 app.wm_attributes("-transparentcolor", "black")
-# app.wm_attributes("-transparentcolor", "#eeeeee")
 app.wm_attributes("-topmost", True)
 app.wm_attributes("-disabled", True)
-
-# centered
+app.state('zoomed')
 
 # label
-label = Label(app, font=('Segoe','100'), fg='#eeeeee', bg='black')
+label = Label(app, font=('Segoe UI','100'), fg='#74B62E', bg='black')
 label.pack()
 timer()
 
@@ -39,6 +37,7 @@ timer()
 
 app.mainloop()
 
-# room for modefication
-# 1) add setting from json, for example displayed text
+# room for modification
+# 1) add setting from json, for example displayed text, color
 # 2) differnt mods - annoying and not so much
+# 3) add motivation phrases
