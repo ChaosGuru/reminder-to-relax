@@ -8,5 +8,7 @@ pip install -r requirements.txt
 ```
 2) Compile using pyinstaller
 ```bash
-pyinstaller --onefile main.py
+pyinstaller --noconsole main.py
 ```
+3) Add dist/main/main.py to task shedule
+...to be continue
