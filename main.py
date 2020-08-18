@@ -14,7 +14,7 @@ def timer():
     label.after(1000, timer)
 
 
-# window
+# Create window and make it transparent.
 app = Tk()
 app.configure(bg='black')
 app.overrideredirect(True)
@@ -23,12 +23,12 @@ app.wm_attributes("-topmost", True)
 app.wm_attributes("-disabled", True)
 app.state('zoomed')
 
-# label
+# Add label and change it every second in function 'timer'.
 label = Label(app, font=('Segoe UI','100', 'bold'), fg='#74B62E', bg='black')
 label.pack()
 timer()
 
-# run
+
 app.mainloop()
 
 # It is possible to make photo with transperent background
